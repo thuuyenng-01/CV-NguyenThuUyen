@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nguyễn Thu Uyên - Portfolio | QA / Middle Tester</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              200: '#bae0fd',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            }
+          },
+          boxShadow: {
+            'soft': '0 10px 30px -5px rgba(0, 0, 0, 0.04), 0 20px 25px -5px rgba(0, 0, 0, 0.02)',
+            'soft-lg': '0 20px 40px -15px rgba(0, 0, 0, 0.07)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8fafc;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(224, 239, 254, 0.4) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(243, 232, 255, 0.35) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+    .tab-btn.active {
+      background-color: #2563eb;
+      color: #ffffff;
+      box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.28);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #e2e8f0;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body class="text-slate-700 min-h-screen py-6 md:py-12 px-4 sm:px-6">
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+    
+    <!-- CỘT TRÁI: THẺ THÔNG TIN CÁ NHÂN (PROFILE CARD) -->
+    <aside class="lg:col-span-4 bg-white/90 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-soft lg:sticky lg:top-8 transition-all">
+      <div class="flex flex-col items-center text-center">
+        <!-- Avatar -->
+        <div class="relative w-40 h-40 sm:w-44 sm:h-44 rounded-3xl overflow-hidden p-1.5 bg-gradient-to-tr from-blue-500 via-indigo-400 to-purple-400 shadow-lg">
+          <img 
+            src="263e36cffbd67b8822c7.jpg" 
+            alt="Nguyễn Thu Uyên" 
+            class="w-full h-full object-cover rounded-[22px] transition-transform duration-500 hover:scale-105"
+            onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600'"
+          />
+        </div>
+
+        <h1 class="text-2xl font-extrabold text-slate-800 mt-5">Nguyễn Thu Uyên</h1>
+        <p class="text-sm font-semibold tracking-wide text-blue-600 bg-blue-50 px-4 py-1 rounded-full mt-2 inline-block">
+          Middle Tester / QA Engineer
+        </p>
+        <p class="text-xs text-slate-500 mt-3 leading-relaxed max-w-xs">
+          Hơn 2 năm kinh nghiệm kiểm thử hệ thống Web, Mobile App và API. Định hướng Scrum Master.
+        </p>
+
+        <!-- Divider -->
+        <div class="w-full h-px bg-slate-100 my-6"></div>
+
+        <!-- Thông tin liên hệ -->
+        <div class="w-full space-y-3.5 text-left text-sm">
+          <div class="flex items-center gap-3.5 p-3 rounded-2xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+            <div class="w-9 h-9 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-cake-candles text-sm"></i>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400">Năm sinh</p>
+              <p class="font-semibold text-slate-700">2001</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3.5 p-3 rounded-2xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+            <div class="w-9 h-9 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-location-dot text-sm"></i>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400">Địa chỉ</p>
+              <p class="font-semibold text-slate-700">Hoàn Kiếm, Hà Nội</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3.5 p-3 rounded-2xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+            <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-graduation-cap text-sm"></i>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400">Học vấn</p>
+              <p class="font-semibold text-slate-700">FPT Polytechnic</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nút hành động -->
+        <div class="w-full mt-6 flex gap-3">
+          <button onclick="showToast('Đang tải hồ sơ CV...')" class="flex-1 py-3 px-4 bg-slate-900 hover:bg-slate-800 text-white font-medium text-sm rounded-2xl shadow-sm transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-download text-xs"></i>
+            <span>Tải CV</span>
+          </button>
+          <button onclick="showToast('Liên hệ: Hoàn Kiếm, Hà Nội')" class="py-3 px-4 bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-medium text-sm rounded-2xl transition-all">
+            <i class="fa-regular fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CỘT PHẢI: KHU VỰC NỘI DUNG TABS -->
+    <main class="lg:col-span-8 bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-slate-100 shadow-soft">
+      
+      <!-- THANH ĐIỀU HƯỚNG TAB -->
+      <nav class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 border-b border-slate-100 custom-scrollbar">
+        <button onclick="switchTab('tab-intro')" id="btn-tab-intro" class="tab-btn active px-5 py-2.5 rounded-2xl text-sm font-semibold transition-all shrink-0">
+          Giới thiệu
+        </button>
+        <button onclick="switchTab('tab-skills')" id="btn-tab-skills" class="tab-btn text-slate-600 hover:text-slate-900 hover:bg-slate-100 px-5 py-2.5 rounded-2xl text-sm font-semibold transition-all shrink-0">
+          Kỹ năng
+        </button>
+        <button onclick="switchTab('tab-projects')" id="btn-tab-projects" class="tab-btn text-slate-600 hover:text-slate-900 hover:bg-slate-100 px-5 py-2.5 rounded-2xl text-sm font-semibold transition-all shrink-0">
+          Dự án
+        </button>
+        <button onclick="switchTab('tab-exp')" id="btn-tab-exp" class="tab-btn text-slate-600 hover:text-slate-900 hover:bg-slate-100 px-5 py-2.5 rounded-2xl text-sm font-semibold transition-all shrink-0">
+          Kinh nghiệm
+        </button>
+      </nav>
+
+      <!-- TAB 1: GIỚI THIỆU -->
+      <section id="tab-intro" class="tab-content block space-y-8 animate-fadeIn">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+            Tóm tắt Chuyên môn
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+            Chuyên viên kiểm thử phần mềm với hơn 2 năm kinh nghiệm thực chiến trên nhiều hệ thống quy mô từ Dịch vụ công Quốc gia đến các nền tảng kiểm duyệt nội dung ứng dụng công nghệ AI. Thành thạo lập kế hoạch kiểm thử (Test Plan), viết kịch bản (Test Case), kiểm thử tích hợp API và phân loại báo cáo lỗi chi tiết.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-5 rounded-2xl bg-blue-50/50 border border-blue-100/60">
+            <div class="w-10 h-10 rounded-xl bg-blue-500 text-white flex items-center justify-center mb-3">
+              <i class="fa-solid fa-list-check"></i>
+            </div>
+            <h3 class="font-bold text-slate-800 text-sm mb-1">Kiểm thử Đa nền tảng</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Manual Testing thuần thục trên Web, Mobile App, kiểm tra tương thích nhiều trình duyệt và phân hệ luồng xử lý phức tạp.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-purple-50/50 border border-purple-100/60">
+            <div class="w-10 h-10 rounded-xl bg-purple-500 text-white flex items-center justify-center mb-3">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <h3 class="font-bold text-slate-800 text-sm mb-1">AI Chatbot & Video AI</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Kinh nghiệm huấn luyện và kiểm thử AI Chatbot, tham gia kiểm thử các hệ thống AI rà soát nội dung video và nhận diện thông minh.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+            Học vấn & Chứng chỉ
+          </h2>
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+            <div>
+              <p class="text-xs font-semibold text-blue-600">2020 - 2023</p>
+              <h4 class="font-bold text-slate-800 mt-0.5">FPT Polytechnic</h4>
+              <p class="text-xs text-slate-500">Chuyên ngành: Digital Marketing</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 bg-white border border-slate-200 rounded-full font-medium text-slate-700">Restful API Testing</span>
+              <span class="text-xs px-3 py-1 bg-white border border-slate-200 rounded-full font-medium text-slate-700">English Topnotch</span>
+              <span class="text-xs px-3 py-1 bg-white border border-slate-200 rounded-full font-medium text-slate-700">Microsoft Office</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: KỸ NĂNG -->
+      <section id="tab-skills" class="tab-content hidden space-y-8 animate-fadeIn">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+          
+          <!-- Chuyên môn kiểm thử & Scrum Master -->
+          <div class="p-6 rounded-3xl bg-slate-50/70 border border-slate-100 space-y-4">
+            <h3 class="font-bold text-slate-900 text-base mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-blue-600"></i>
+              Chuyên môn Kiểm thử
+            </h3>
+
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 mt-0.5 text-xs">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600">
+                Phân tích yêu cầu, thiết kế Test Plan & Test Case chi tiết.
+              </p>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 mt-0.5 text-xs">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600">
+                Kiểm thử Functional, UI/UX, Integration, Regression, UAT.
+              </p>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 mt-0.5 text-xs">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600">
+                Kiểm thử tích hợp API (HTTP methods, status code, JSON).
+              </p>
+            </div>
+
+            <!-- VAI TRÒ SCRUM MASTER -->
+            <div class="p-4 rounded-2xl bg-white border border-blue-100 shadow-sm space-y-2">
+              <div class="flex items-center gap-2 text-blue-700 font-semibold text-xs sm:text-sm">
+                <i class="fa-solid fa-users-gear"></i>
+                <span>Vai trò đảm nhận vị trí Scrum Master:</span>
+              </div>
+              <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5 pl-6 list-disc">
+                <li>Điều phối daily standup, sprint review, retrospective (khi được phân công).</li>
+                <li>Theo dõi tiến độ sprint và hỗ trợ loại bỏ các trở ngại (impediments).</li>
+              </ul>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 mt-0.5 text-xs">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600">
+                Hỗ trợ Tech Support, hướng dẫn triển khai sản phẩm cho khách hàng.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cột phải: Công cụ & Phần mềm -->
+          <div class="space-y-6">
+            <div class="p-6 rounded-3xl bg-slate-50/70 border border-slate-100">
+              <h3 class="font-bold text-slate-900 text-base mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-screwdriver-wrench text-indigo-600"></i>
+                Công cụ & Phần mềm
+              </h3>
+              <div class="flex flex-wrap gap-2.5">
+                <span class="px-3.5 py-2 rounded-xl bg-white border border-slate-200/80 text-xs sm:text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-2">
+                  <i class="fa-solid fa-paper-plane text-orange-500"></i> Postman
+                </span>
+                <span class="px-3.5 py-2 rounded-xl bg-white border border-slate-200/80 text-xs sm:text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-2">
+                  <i class="fa-brands fa-jira text-blue-500"></i> Jira
+                </span>
+                <span class="px-3.5 py-2 rounded-xl bg-white border border-slate-200/80 text-xs sm:text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-2">
+                  <i class="fa-solid fa-vial text-emerald-500"></i> TestRail
+                </span>
+                <span class="px-3.5 py-2 rounded-xl bg-white border border-slate-200/80 text-xs sm:text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-2">
+                  <i class="fa-solid fa-bug text-red-500"></i> Redmine
+                </span>
+                <span class="px-3.5 py-2 rounded-xl bg-white border border-slate-200/80 text-xs sm:text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-2">
+                  <i class="fa-solid fa-file-excel text-green-600"></i> Excel / Sheets
+                </span>
+                <span class="px-3.5 py-2 rounded-xl bg-white border border-slate-200/80 text-xs sm:text-sm font-semibold text-slate-700 shadow-sm flex items-center gap-2">
+                  <i class="fa-solid fa-gauge-high text-yellow-500"></i> Google Speed
+                </span>
+              </div>
+            </div>
+
+            <div class="p-6 rounded-3xl bg-gradient-to-br from-indigo-50/70 to-blue-50/70 border border-indigo-100/60 text-center">
+              <i class="fa-solid fa-laptop-code text-indigo-500 text-3xl mb-2"></i>
+              <p class="text-xs sm:text-sm text-slate-600">
+                Luôn chủ động học hỏi quy trình, công nghệ kiểm thử tự động (Automation) và tối ưu hóa năng suất bàn giao phần mềm.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TAB 3: DỰ ÁN -->
+      <section id="tab-projects" class="tab-content hidden space-y-10 animate-fadeIn">
+        
+        <!-- TIÊU ĐỀ: DỰ ÁN TIÊU BIỂU -->
+        <div>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 mb-1 flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-blue-600"></span>
+            Dự án tiêu biểu
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500">Các sản phẩm trọng điểm tại Netspace và hệ thống nền tảng dịch vụ số.</p>
+        </div>
+
+        <!-- KHỐI DỰ ÁN NETSPACE (GIAO DIỆN DARK/CARD SANG TRỌNG THEO MẪU) -->
+        <div class="space-y-8 bg-[#0b0f19] text-slate-200 p-5 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl">
+          
+          <!-- 1. DỰ ÁN KOL SAFETY -->
+          <article class="space-y-6 pb-8 border-b border-slate-800/80">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-semibold">
+                  AI · Kiểm duyệt nội dung · Video tiếng Việt
+                </span>
+              </div>
+              <a href="https://safety.netspace.vn/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-blue-400 hover:text-blue-300 transition-colors">
+                <span>safety.netspace.vn</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-black text-white tracking-tight">KOL Safety</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mt-2">
+                Nền tảng AI rà soát video tiếng Việt <strong class="text-slate-200">trước khi xuất bản</strong>. Hệ thống phân tích song song giọng nói, chữ trên màn hình và hình ảnh, trả về <strong class="text-blue-400">Điểm An toàn 0–100</strong> kèm đúng câu thoại, mốc thời gian và khung hình làm căn cứ cho mỗi cảnh báo — kiểm duyệt viên chỉ cần xem các phân đoạn được đánh dấu.
+              </p>
+            </div>
+
+            <!-- Bullet points tính năng -->
+            <ul class="text-xs sm:text-sm text-slate-300 space-y-2.5">
+              <li class="flex items-start gap-2.5">
+                <span class="text-blue-400 mt-0.5">•</span>
+                <span><strong class="text-white">8 nhóm tiêu chí vi phạm</strong> theo Bộ Quy tắc ứng xử trên môi trường số (QĐ 423/QĐ-BVHTTDL): hình ảnh 18+, nói tục, chính trị nhạy cảm, phân biệt đối xử, tin giả, kích động bạo lực.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-blue-400 mt-0.5">•</span>
+                <span><strong class="text-white">Nhận diện tiếng lóng, tiếng chửi vùng miền</strong> và lỗi cố tình viết sai chính tả mà các bộ lọc quốc tế thường bỏ sót.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-blue-400 mt-0.5">•</span>
+                <span><strong class="text-white">Kết luận 3 mức:</strong> An toàn, Vùng xám, Vi phạm — mỗi kết luận đều truy xuất được câu thoại, mốc thời gian và khung hình vi phạm.</span>
+              </li>
+            </ul>
+
+            <!-- Module sản phẩm KOL Safety -->
+            <div>
+              <p class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-3">Các module sản phẩm:</p>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div class="bg-slate-900/90 p-4 rounded-2xl border border-slate-800">
+                  <h4 class="text-white font-bold text-xs mb-1">Kiểm duyệt video hàng loạt</h4>
+                  <p class="text-[11px] text-slate-400 leading-normal">Tải lên nhiều video cùng lúc; job vẫn chạy trên máy chủ kể cả khi đã đóng trình duyệt.</p>
+                </div>
+                <div class="bg-slate-900/90 p-4 rounded-2xl border border-slate-800">
+                  <h4 class="text-white font-bold text-xs mb-1">Rà soát toàn bộ kênh</h4>
+                  <p class="text-[11px] text-slate-400 leading-normal">Dán link kênh TikTok, YouTube hoặc Facebook để chấm điểm từng video và tổng hợp tình trạng cả kênh.</p>
+                </div>
+                <div class="bg-slate-900/90 p-4 rounded-2xl border border-slate-800">
+                  <h4 class="text-white font-bold text-xs mb-1">Xuất bản đa nền tảng</h4>
+                  <p class="text-[11px] text-slate-400 leading-normal">Đăng video đã duyệt lên mạng xã hội chỉ với một thao tác, có hẹn giờ và lưu lịch sử.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. DỰ ÁN KOL.GOV.VN -->
+          <article class="space-y-6 pb-8 border-b border-slate-800/80">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-semibold">
+                Nhà nước · Cổng thông tin Quốc gia
+              </span>
+              <a href="https://kol.gov.vn/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-blue-400 hover:text-blue-300 transition-colors">
+                <span>kol.gov.vn</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-black text-white tracking-tight">KOL.gov.vn</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mt-2">
+                Cổng thông tin và cơ sở dữ liệu quốc gia chính thức về KOL, MCN, người có ảnh hưởng và nhà sáng tạo nội dung, do Trung tâm Đo kiểm Phát thanh, truyền hình và thông tin điện tử vận hành. <strong class="text-slate-200">NetSpace là đối tác công nghệ</strong> — xây dựng và vận hành nền tảng đứng sau các bảng xếp hạng, hồ sơ, luồng xác thực và phản ánh.
+              </p>
+            </div>
+
+            <!-- Thống số chính -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <div class="bg-slate-900/90 p-3.5 rounded-2xl border border-slate-800">
+                <p class="text-[10px] text-slate-400 uppercase">Giấy phép</p>
+                <p class="text-xs sm:text-sm font-bold text-white mt-0.5">118/GP-TTĐT</p>
+              </div>
+              <div class="bg-slate-900/90 p-3.5 rounded-2xl border border-slate-800">
+                <p class="text-[10px] text-slate-400 uppercase">Nguồn dữ liệu</p>
+                <p class="text-xs sm:text-sm font-bold text-white mt-0.5">Buzzmetrics BSI</p>
+              </div>
+              <div class="bg-slate-900/90 p-3.5 rounded-2xl border border-slate-800">
+                <p class="text-[10px] text-slate-400 uppercase">Nền tảng theo dõi</p>
+                <p class="text-xs sm:text-sm font-bold text-white mt-0.5">FB · YT · TikTok</p>
+              </div>
+              <div class="bg-slate-900/90 p-3.5 rounded-2xl border border-slate-800">
+                <p class="text-[10px] text-slate-400 uppercase">Vai trò NetSpace</p>
+                <p class="text-xs sm:text-sm font-bold text-blue-400 mt-0.5">Đối tác công nghệ</p>
+              </div>
+            </div>
+
+            <!-- Các phân hệ -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+              <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800 flex items-center gap-3">
+                <span class="text-blue-400 font-mono font-bold">01</span>
+                <span>Cổng thông tin công khai &amp; tra cứu hồ sơ</span>
+              </div>
+              <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800 flex items-center gap-3">
+                <span class="text-blue-400 font-mono font-bold">02</span>
+                <span>Bảng xếp hạng trực tiếp theo mức tăng tương tác</span>
+              </div>
+              <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800 flex items-center gap-3">
+                <span class="text-blue-400 font-mono font-bold">03</span>
+                <span>Chỉ số ảnh hưởng xã hội &amp; đo lường tương tác</span>
+              </div>
+              <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800 flex items-center gap-3">
+                <span class="text-blue-400 font-mono font-bold">04</span>
+                <span>Hồ sơ quản lý MCN &amp; luồng xác thực tài khoản</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. DỰ ÁN GÓC NHÌN MỚI -->
+          <article class="space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <span class="px-3 py-1 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20 text-xs font-semibold">
+                Truyền thông · Mạng xã hội · eMagazine
+              </span>
+              <a href="https://gocnhinmoi.com.vn/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-blue-400 hover:text-blue-300 transition-colors">
+                <span>gocnhinmoi.com.vn</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-black text-white tracking-tight">Góc Nhìn Mới</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mt-2">
+                Mạng xã hội tiếng Việt cho những bài viết chuyên sâu, đa chiều — thành viên và tác giả chuyên gia tự đăng bài, độc giả theo dõi chủ đề và tác giả, định dạng <strong class="text-slate-200">eMagazine long-read</strong> trong mục Spotlight.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div class="bg-slate-900/90 p-3.5 rounded-2xl border border-slate-800">
+                <h4 class="text-white font-bold text-xs mb-1">Viết &amp; đăng bài</h4>
+                <p class="text-[11px] text-slate-400">Trình soạn thảo chuyên sâu, quản lý bài lưu và giữ chân bạn đọc.</p>
+              </div>
+              <div class="bg-slate-900/90 p-3.5 rounded-2xl border border-slate-800">
+                <h4 class="text-white font-bold text-xs mb-1">Chuyên mục đa dạng</h4>
+                <p class="text-[11px] text-slate-400">Trà đàm, Quan điểm, Luận cổ suy kim, Góc mở và Ký sự.</p>
+              </div>
+              <div class="bg-slate-900/90 p-3.5 rounded-2xl border border-slate-800">
+                <h4 class="text-white font-bold text-xs mb-1">Nghe &amp; Xem</h4>
+                <p class="text-[11px] text-slate-400">Video, podcast và playlist nội dung số được phân loại thông minh.</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- CÁC DỰ ÁN NỀN TẢNG THƯƠNG MẠI & BẤT ĐỘNG SẢN -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <a href="https://thienkhoicdc.com/" target="_blank" rel="noopener noreferrer" class="p-5 rounded-2xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-blue-200 shadow-sm hover:shadow-md transition-all group">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs px-2.5 py-1 rounded-full bg-blue-100/70 text-blue-700 font-medium">Y tế / Dịch tễ</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+            </div>
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600 transition-colors">Thiên Khôi CDC</h4>
+            <p class="text-xs text-slate-500 mt-1">Hệ thống thông tin quản lý y tế và dữ liệu dịch tễ.</p>
+          </a>
+
+          <a href="https://thienkhoitravel.com/" target="_blank" rel="noopener noreferrer" class="p-5 rounded-2xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-blue-200 shadow-sm hover:shadow-md transition-all group">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-100/70 text-emerald-700 font-medium">Du lịch</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+            </div>
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600 transition-colors">Thiên Khôi Travel</h4>
+            <p class="text-xs text-slate-500 mt-1">Website đặt tour, booking phòng và trải nghiệm du lịch.</p>
+          </a>
+
+          <a href="https://nhadat247.vn/" target="_blank" rel="noopener noreferrer" class="p-5 rounded-2xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-blue-200 shadow-sm hover:shadow-md transition-all group">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs px-2.5 py-1 rounded-full bg-purple-100/70 text-purple-700 font-medium">Bất động sản</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+            </div>
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600 transition-colors">Nhà đất 247</h4>
+            <p class="text-xs text-slate-500 mt-1">Sàn giao dịch và cổng thông tin bất động sản toàn quốc.</p>
+          </a>
+        </div>
+
+        <!-- TIÊU ĐỀ: HỆ THỐNG DỊCH VỤ CÔNG & HÀNH CHÍNH -->
+        <div class="pt-6 border-t border-slate-100">
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-1">
+            Hệ thống Dịch vụ công & Hành chính
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-500 mb-6">Kinh nghiệm kiểm thử các dự án hành chính công quy mô quốc gia & cấp bộ ngành.</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+              <span class="text-xs font-semibold text-blue-600">7/2022 - 7/2024</span>
+              <h4 class="font-bold text-slate-800 text-sm mt-1">Phần mềm Dịch Vụ Công</h4>
+              <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">
+                Đảm bảo vận hành đồng bộ hồ sơ công dân và cán bộ, tích hợp API CSDL Dân cư Quốc gia và cổng thanh toán VCB, Momo.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+              <span class="text-xs font-semibold text-blue-600">10/2022 - 7/2024</span>
+              <h4 class="font-bold text-slate-800 text-sm mt-1">Một cửa Điện Tử ECS</h4>
+              <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">
+                Kiểm thử luồng xử lý hồ sơ (tiếp nhận – thẩm định – phê duyệt – trả kết quả) theo văn bản nghị định của Chính phủ.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+              <span class="text-xs font-semibold text-blue-600">5/2022 - 11/2023</span>
+              <h4 class="font-bold text-slate-800 text-sm mt-1">Chỉ số PAPI (EPapi)</h4>
+              <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">
+                Kiểm thử logic chấm điểm tự động và xếp hạng các địa phương theo tiêu chí hiệu quả quản trị và hành chính công.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+              <span class="text-xs font-semibold text-blue-600">8/2023 - 7/2024</span>
+              <h4 class="font-bold text-slate-800 text-sm mt-1">Chỉ số CCHC (EParindex)</h4>
+              <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">
+                Kiểm thử thu thập dữ liệu khảo sát, tính điểm tự động, xuất báo cáo Bộ Nội vụ và phân quyền dữ liệu các cấp.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- TAB 4: KINH NGHIỆM -->
+      <section id="tab-exp" class="tab-content hidden space-y-6 animate-fadeIn">
+        <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+          Lộ trình Sự nghiệp
+        </h2>
+
+        <div class="relative pl-6 sm:pl-8 border-l-2 border-slate-200 space-y-8">
+          
+          <!-- Netspace -->
+          <div class="relative">
+            <span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></span>
+            <div class="bg-slate-50/80 p-5 rounded-2xl border border-slate-100">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3 class="font-bold text-slate-900 text-base">Middle Tester — NetSpace Technology</h3>
+                <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded-full">Hiện tại</span>
+              </div>
+              <ul class="text-xs sm:text-sm text-slate-600 mt-3 space-y-2 list-disc pl-5">
+                <li>Kiểm thử Functional, UI/UX, Integration và Regression Testing cho hệ thống Web và Mobile App.</li>
+                <li>Thiết kế, quản lý Test Case, Test Plan, và theo dõi Bug Report trên Jira / Redmine.</li>
+                <li>Kiểm thử tích hợp API bằng Postman (tạo test request, xác thực status code, JSON response).</li>
+                <li>Tham gia UAT cùng Product Owner và hỗ trợ kỹ thuật (Tech Support / Implementation) khi triển khai.</li>
+                <li>Hỗ trợ vai trò Scrum Master: điều phối daily standup, sprint review, theo dõi và loại bỏ impediments.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Dịch vụ công -->
+          <div class="relative">
+            <span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-slate-300 border-4 border-white shadow"></span>
+            <div class="bg-slate-50/80 p-5 rounded-2xl border border-slate-100">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3 class="font-bold text-slate-900 text-base">Manual Tester — Phần mềm Hành chính & Dịch vụ công</h3>
+                <span class="text-xs font-medium text-slate-400">07/2022 - 07/2024</span>
+              </div>
+              <ul class="text-xs sm:text-sm text-slate-600 mt-3 space-y-1.5 list-disc pl-5">
+                <li>Phân tích yêu cầu nghiệp vụ (SRS, Use case), thiết kế kịch bản kiểm thử toàn diện.</li>
+                <li>Kiểm thử thủ công Web đa trình duyệt (Chrome, Cốc Cốc, Firefox) và Mobile App.</li>
+                <li>Kiểm tra CSDL (Database), xác thực luồng dữ liệu hồ sơ và quản lý lỗi trên Redmine.</li>
+                <li>Tham gia huấn luyện và kiểm thử AI Chatbot.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Kinh nghiệm Digital Marketing / SEO -->
+          <div class="relative">
+            <span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-slate-300 border-4 border-white shadow"></span>
+            <div class="bg-slate-50/80 p-5 rounded-2xl border border-slate-100">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3 class="font-bold text-slate-900 text-base">SEO Website &amp; Content — XANH FRUIST</h3>
+                <span class="text-xs font-medium text-slate-400">03/2021 - 10/2021</span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mt-2">
+                Tối ưu cấu trúc website, tốc độ tải trang, phân tích dữ liệu qua Google Search Console và Google Analytics.
+              </p>
+            </div>
+          </div>
+
+          <!-- Hoạt động cộng đồng -->
+          <div class="relative">
+            <span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-slate-300 border-4 border-white shadow"></span>
+            <div class="bg-slate-50/80 p-5 rounded-2xl border border-slate-100">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3 class="font-bold text-slate-900 text-base">Trưởng nhóm Điều hành — HyunA FC Việt Nam</h3>
+                <span class="text-xs font-medium text-slate-400">08/2019 - 03/2024</span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mt-2">
+                Biên dịch nội dung Hàn - Việt, quản lý truyền thông sự kiện và phối hợp cùng công ty quản lý khi có lịch trình tại Việt Nam.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-xl text-xs sm:text-sm font-medium transition-all duration-300 transform translate-y-20 opacity-0 pointer-events-none flex items-center gap-2.5 z-50">
+    <i class="fa-solid fa-circle-check text-emerald-400"></i>
+    <span id="toast-msg">Thông báo</span>
+  </div>
+
+  <script>
+    // Xử lý chuyển đổi Tab mượt mà
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(section => {
+        section.classList.add('hidden');
+        section.classList.remove('block');
+      });
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active', 'text-white', 'bg-blue-600', 'shadow-md');
+        btn.classList.add('text-slate-600');
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) {
+        activeSection.classList.remove('hidden');
+        activeSection.classList.add('block');
+      }
+
+      const activeBtn = document.getElementById('btn-' + tabId);
+      if (activeBtn) {
+        activeBtn.classList.add('active');
+        activeBtn.classList.remove('text-slate-600');
+      }
+    }
+
+    // Toast Popup thay thế cho alert()
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      toastMsg.innerText = message;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+      }, 2500);
+    }
+  </script>
+</body>
+</html>
